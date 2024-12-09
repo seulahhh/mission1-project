@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="dataSourceStorageLocal" created-in="DB-243.22562.53">
-    <data-source name="seoul-wifi.sqlite3" uuid="5c2418af-87c4-441e-8d12-3edc85f77a1a">
+  <component name="dataSourceStorageLocal" created-in="IU-243.21565.193">
+    <data-source name="seoul-wifi" uuid="bf95b703-1b4a-477c-b64b-d31b3f7b6809">
       <database-info product="SQLite" version="3.45.1" jdbc-version="4.2" driver-name="SQLite JDBC" driver-version="3.45.1.0" dbms="SQLITE" exact-version="3.45.1" exact-driver-version="3.45">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
       <auth-provider>no-auth</auth-provider>
       <schema-mapping>
         <introspection-scope>

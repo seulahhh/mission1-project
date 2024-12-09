@@ -1,0 +1,369 @@
+
+/* reset.css */
+@charset "utf-8";
+
+/* 여백 초기화 */
+body,
+div,
+ul,
+li,
+dl,
+dd,
+dt,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+fieldset,
+legend,
+p,
+select,
+table,
+th,
+td,
+tr,
+textarea,
+button,
+form,
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+/* a 링크 초기화 */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #2698cb;
+}
+
+/* 폰트 초기화 */
+body,
+input,
+textarea,
+select,
+button,
+table {
+  font-family: "Nanum Gothic", AppleSDGothicNeo-Regular, "Malgun Gothic",
+    "맑은 고딕", dotum, "돋움", sans-serif;
+  color: #222;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* 폰트 스타일 초기화 (기울임) */
+em,
+address {
+  font-style: normal;
+}
+
+/* 블릿기호 초기화 */
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+/* 제목 태그 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* 버튼 초기화 */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* box-sizing 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+
+/* --------------------------------- */
+
+h1 {
+    margin:20px;
+    font-weight: 800;
+    font-size: 30px;
+}
+/* -------menu container ------ */
+.menu_container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+form input[type="text"] {
+    width: 180px;
+    height: 1.8em;
+}
+
+.menu_container button {
+    padding: 0 10px;
+    border: 1px solid #a2a2a2;
+    border-radius: 3px;
+}
+.menu_container button:hover {
+    background-color: #c2c2c2;
+    transition: 0.3s;
+}
+.menu_container .locaion_menu {
+    margin-left: 5px;
+}
+
+/* -------------------------------table - common --------------------------------- */
+table {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+    border-collapse: collapse;
+}
+table tbody {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+table tbody tr,
+table thead tr {
+    display: flex;
+    justify-content: center;
+}
+
+table thead tr {
+    background-color: #00B16D;
+    color: #ffffff;
+    border-collapse: collapse;
+}
+table tbody tr:nth-child(2n) {
+    background-color: #F2F2F2;
+}
+table th,
+table td {
+    margin: 0;
+    border: 0.5px solid #dddddd;
+    flex-grow: 1;
+    display: flex;
+    padding: 7px;
+    align-items: center;
+
+    /* 영어 , 숫자만 줄바꿈 안될때 */
+    word-break:break-all;
+    word-wrap:break-word;
+}
+table th {
+    justify-content: center;
+}
+table td {
+    justify-content: start;
+}
+
+/* empty tr, empty td */
+table tbody tr .empty_td {
+    display: flex;
+    flex-grow: 1;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+/* 삭제버튼 ui*/
+table button {
+    padding: 0 10px;
+    border: 1px solid #a2a2a2;
+    border-radius: 3px;
+}
+table button:hover {
+    background-color: #c2c2c2;
+    transition: 0.3s;
+}
+
+
+/* 테이블 내 삭제버튼 align*/
+#bookmark_group_table tbody tr td:last-child,
+#bookmark_table tbody tr td:last-child,
+#wifi_history_table tbody tr td:last-child {
+    justify-content: center;
+    gap: 5px;
+}
+
+/* --- wifi_info_table table flex basis---⬇️ */
+
+#wifi_info_table th,
+#wifi_info_table td:not(.empty_td) {
+    flex-grow: 0;
+    flex-basis: 5%;
+    flex-wrap: wrap;
+}
+
+/*  11~19 */
+#wifi_info_table th:nth-child(n + 9):nth-child(-n + 16),
+#wifi_info_table td:nth-child(n + 9):nth-child(-n + 16) {
+    flex-basis: 5%;
+}
+#wifi_info_table th:nth-child(n + 4):nth-child(-n + 5),
+#wifi_info_table td:nth-child(n + 4):nth-child(-n + 5) {
+    flex-basis: 7%
+}
+#wifi_info_table th:nth-child(2),
+#wifi_info_table td:nth-child(2) {
+    flex-basis: 7%;
+}
+#wifi_info_table th:nth-child(3),
+#wifi_info_table td:nth-child(3) {
+    flex-basis: 4%;
+}
+#wifi_info_table th:nth-child(6),
+#wifi_info_table td:nth-child(6) {
+    flex-grow: 1;
+    flex-basis: 15%;
+}
+#wifi_info_table th:nth-child(8),
+#wifi_info_table td:nth-child(8) {
+    flex-basis: 7%;
+}
+#wifi_info_table th:last-child,
+#wifi_info_table td:last-child:not(.empty_td){
+    flex-basis: 7%;
+}
+/* --- wifi_info_table table flex basis---⬆️ */
+
+
+/* --- wifi_history_table table flex basis---⬇️ */
+#wifi_history_table th:first-child,
+#wifi_history_table td:first-child {
+    flex-grow: 0;
+    flex-basis: 10%;
+}
+#wifi_history_table th:nth-child(2),
+#wifi_history_table td:nth-child(2) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#wifi_history_table th:nth-child(3),
+#wifi_history_table td:nth-child(3) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#wifi_history_table th:last-child,
+#wifi_history_table td:last-child{
+    flex-grow: 0;
+    flex-basis: 15%;
+}
+/* --- wifi_history_table table flex basis---⬆️ */
+
+/* ---book-mark-group table flex basis---⬇️ */
+#bookmark_group_table th:first-child,
+#bookmark_group_table td:first-child {
+    flex-grow: 0;
+    flex-basis: 10%;
+}
+#bookmark_group_table th:nth-child(2),
+#bookmark_group_table td:nth-child(2) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#bookmark_group_table th:nth-child(3),
+#bookmark_group_table td:nth-child(3) {
+    flex-grow: 0;
+    flex-basis: 10%;
+}
+#bookmark_group_table th:nth-child(4),
+#bookmark_group_table td:nth-child(4) {
+    flex-grow: 0;
+    flex-basis: 20%;
+}
+#bookmark_group_table th:nth-child(5),
+#bookmark_group_table td:nth-child(5) {
+    flex-grow: 0;
+    flex-basis: 20%;
+}
+#bookmark_group_table th:last-child,
+#bookmark_group_table td:last-child{
+    flex-grow: 0;
+    flex-basis: 15%;
+}
+/* ---book-mark-group table flex basis---⬆️ */
+
+
+/* ---book-mark-group table flex basis---⬇️ */
+#bookmark_table th:first-child,
+#bookmark_table td:first-child {
+    flex-grow: 0;
+    flex-basis: 15%;
+}
+#bookmark_table th:nth-child(2),
+#bookmark_table td:nth-child(2) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#bookmark_table th:nth-child(3),
+#bookmark_table td:nth-child(3) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#bookmark_table th:nth-child(4),
+#bookmark_table td:nth-child(4) {
+    flex-grow: 0;
+    flex-basis: 25%;
+}
+#bookmark_table th:last-child,
+#bookmark_table td:last-child{
+    flex-grow: 0;
+    flex-basis: 15%;
+}
+/* ---book-mark-group table flex basis---⬆️ */
+
+
+/* ---------------------------------container ---------------------------------*/
+.container {
+    padding: 0 20px;
+}
+
+/* menu_container */
+.menu_container ul{
+    display: flex;
+    gap: 7px;
+}
+.menu_container li {
+    position: relative;
+    display: flex;
+    gap: 7px;
+}
+.menu_container li:not(:last-child)::after {
+    content: "|";
+    position: absolute 0% 100%;
+    display: inline-block;
+}
+
+
+
+/*%%%%%%%%%%%% load-wifi.jsp %%%%%%%%%%%*/
+#load_wifi h1 {
+    display: flex;
+    justify-content: center;
+}
+/*%%%%%%%%%%%% load-wifi.jsp %%%%%%%%%%%*/
+#load_wifi .menu_container {
+    flex-direction: row;
+    align-items: center;
+}
+#load_wifi .menu_container a{
+    font-size: 15px;
+}
